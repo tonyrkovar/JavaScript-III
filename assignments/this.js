@@ -18,14 +18,62 @@
 
 // code example for Window Binding
 
+
+//###commented out so it never runs. guess I could also use strict lol   
+
+// console.log(this)
+
+
+
+
 // Principle 2
+
+/*    ### Commented out so it doesn't compete with prototype.js
+function Humanoid(type){
+    CharacterStats.call(this, type)
+    this.team = type.team;
+    this.weapons = type.weapons;
+    this.language = type.language;
+  }
+
+  const mage = new Humanoid({
+    createdAt: new Date(),
+    dimensions: {
+      length: 2,
+      width: 1,
+      height: 1,
+    },
+    healthPoints: 5,
+    name: 'Bruce',
+    team: 'Mage Guild',
+    weapons: [
+      'Staff of Shamalama',
+    ],
+    language: 'Common Tongue',
+  });
+
+*/
 
 // code example for Implicit Binding
 
 // Principle 3
 
+function Snappy(snapping){
+    this.thing = snapping;
+}
+
+let mySnap = new Snappy(`Snip snap`);
+
+console.log(mySnap.thing);
+
+
+
 // code example for New Binding
 
 // Principle 4
+Humanoid.prototype = Object.create(CharacterStats.prototype);
+Humanoid.prototype.greet = function(){
+  return `${this.name} offers a greeting in ${this.language}.`;
+};
 
 // code example for Explicit Binding
