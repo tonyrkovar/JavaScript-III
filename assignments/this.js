@@ -58,13 +58,13 @@ function Humanoid(type){
 
 // Principle 3
 
-function Snappy(snapping){
-    this.thing = snapping;
+function Snappysnaps(snapping){
+    this.snap = snapping;
 }
 
-let mySnap = new Snappy(`Snip snap`);
+let mySnappySnipSnap = new Snappysnaps(`Snip snap`);
 
-console.log(mySnap.thing);
+console.log(mySnappySnipSnap.snap);
 
 
 

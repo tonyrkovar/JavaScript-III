@@ -10,24 +10,6 @@
   Each constructor function has unique properties and methods that are defined in their block comments below:
 */
 
-// const mage = new Humanoid({
-//   createdAt: new Date(),
-//   dimensions: {
-//     length: 2,
-//     width: 1,
-//     height: 1,
-//   },
-//   healthPoints: 5,
-//   name: 'Bruce',
-//   team: 'Mage Guild',
-//   weapons: [
-//     'Staff of Shamalama',
-//   ],
-//   language: 'Common Tongue',
-// });
-  
-
-
 /*
   === GameObject ===
   * createdAt
@@ -45,20 +27,6 @@ GameObject.prototype.destroy = function(){
   return `${this.name} was removed from the game`
 };
 
-
-// Test GameObject
-// const mage = new Humanoid({
-//   createdAt: 20,
-//   name: 'Karsmack',
-//   dimensions: '20 x 60',
-//   healthPoints: 2132,
-//   team: 'me',
-//   weapons: 'fisticuffs',
-//   language: 'portugese',
-// });
-// console.log(mage);
-
-
 /*
   === CharacterStats ===
   * healthPoints
@@ -74,13 +42,6 @@ CharacterStats.prototype = Object.create(GameObject.prototype);
 CharacterStats.prototype.takeDamage = function(){
   return `${this.name} took damage.`;
 }
-
-// CharacterStats test - My code
-// const hurt = new CharacterStats({
-//   healthPoints: 2323,
-// });
-// console.log(hurt);
-
 
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -171,7 +132,7 @@ Humanoid.prototype.greet = function(){
   console.log(swordsman.team); // The Round Table
   console.log(mage.weapons); // Staff of Shamalama
   console.log(archer.language); // Elvish
-  // console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+  console.log(archer.greet()); // Lilith offers a greeting in Elvish.
   console.log(mage.takeDamage()); // Bruce took damage.
   console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
 
@@ -180,3 +141,4 @@ Humanoid.prototype.greet = function(){
   // * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.  
   // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
   // * Create two new objects, one a villain and one a hero and fight it out with methods!
+
